@@ -1,5 +1,8 @@
 name: Build BMCC24 Resource-Pack
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]
