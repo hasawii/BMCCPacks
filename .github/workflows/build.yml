@@ -1,0 +1,24 @@
+name: Build BMCC24 Resource-Pack
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create ZIP
+        run: |
+          rm -f BMCC24-main.zip
+          zip -r BMCC24-main.zip .
+
+      - name: Commit ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add BMCC24-main.zip
+          git commit -m "📦 Build BMCC24-main.zip [ci skip]" || echo "Nothing to commit"
+          git push
