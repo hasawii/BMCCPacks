@@ -1,0 +1,164 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/cake"
+	},
+	
+	"overrides":
+	[
+       	{
+		    "predicate": 
+			{
+				"custom_model_data":1
+			},
+			    "model": "custom:hub/cred1"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":2
+			},
+			    "model": "custom:hub/cred2"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":3
+			},
+			    "model": "custom:hub/cred3"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":4
+			},
+			    "model": "custom:hub/cred4"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":5
+			},
+			    "model": "custom:hub/cred5"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":6
+			},
+			    "model": "custom:hub/cred6"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":7
+			},
+			    "model": "custom:hub/cred-ty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":8
+			},
+			    "model": "custom:hub/cred-s1"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":9
+			},
+			    "model": "custom:hub/donators_sign"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":10
+			},
+			    "model": "custom:hub/leaderboards_sign"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":11
+			},
+			    "model": "custom:hub/mcc_coin"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":12
+			},
+			    "model": "custom:hub/screen"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":13
+			},
+			    "model": "custom:hub/screen1-4"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":14
+			},
+			    "model": "custom:hub/screen2-4"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":15
+			},
+			    "model": "custom:hub/screen3-4"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":16
+			},
+			    "model": "custom:hub/screen4-4"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":17
+			},
+			    "model": "custom:hub/mcclive"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":18
+			},
+			    "model": "custom:hub/merch_stand_shirts"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":19
+			},
+			    "model": "custom:hub/merch_stand_hanger"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":20
+			},
+			    "model": "custom:hub/merch_sign"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":21
+			},
+			    "model": "custom:hub/screen_static"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":22
+			},
+			    "model": "custom:hub/mannequin"
+		}
+	]
+}

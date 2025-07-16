@@ -1,0 +1,353 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/popped_chorus_fruit"
+	},
+	
+	"overrides":
+	[
+       	{
+		    "predicate": 
+			{
+				"custom_model_data":1
+			},
+			    "model": "custom:bmcc_interface/accept"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":2
+			},
+			    "model": "custom:bmcc_interface/cancel"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":3
+			},
+			    "model": "custom:bmcc_interface/exit"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":4
+			},
+			    "model": "custom:bmcc_interface/back"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":5
+			},
+			    "model": "custom:bmcc_interface/info"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":6
+			},
+			    "model": "custom:bmcc_interface/info_blue"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":7
+			},
+			    "model": "custom:bmcc_interface/spectate/skull"
+		},{
+		    "predicate": 
+			{
+				"custom_model_data":10
+			},
+			    "model": "minecraft:item/spectate/red_rabbits"
+		},
+        {
+		    "predicate": 
+			{
+				"custom_model_data":11
+			},
+			    "model": "minecraft:item/spectate/orange_ocelots"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":12
+			},
+			    "model": "minecraft:item/spectate/yellow_yaks"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":13
+			},
+			    "model": "minecraft:item/spectate/lime_llamas"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":14
+			},
+			    "model": "minecraft:item/spectate/green_guardians"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":15
+			},
+			    "model": "minecraft:item/spectate/cyan_creepers"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":16
+			},
+			    "model": "minecraft:item/spectate/aqua_horses"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":17
+			},
+			    "model": "minecraft:item/spectate/blue_bats"
+		},
+	    {
+		    "predicate": 
+			{
+				"custom_model_data":18
+			},
+			    "model": "minecraft:item/spectate/purple_pandas"
+		},
+	    {
+		    "predicate": 
+			{
+				"custom_model_data":19
+			},
+			    "model": "minecraft:item/spectate/pink_parrots"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":20
+			},
+			    "model": "minecraft:item/spectate/red_rabbits_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":21
+			},
+			    "model": "minecraft:item/spectate/orange_ocelots_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":22
+			},
+			    "model": "minecraft:item/spectate/yellow_yaks_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":23
+			},
+			    "model": "minecraft:item/spectate/lime_llamas_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":24
+			},
+			    "model": "minecraft:item/spectate/green_guardians_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":25
+			},
+			    "model": "minecraft:item/spectate/cyan_creepers_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":26
+			},
+			    "model": "minecraft:item/spectate/aqua_horses_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":27
+			},
+			    "model": "minecraft:item/spectate/blue_bats_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":28
+			},
+			    "model": "minecraft:item/spectate/purple_pandas_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":29
+			},
+			    "model": "minecraft:item/spectate/pink_parrots_empty"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":30
+			},
+			    "model": "custom:bmcc_items/kit_selection"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":31
+			},
+			    "model": "custom:bmcc_items/kit/baller"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":32
+			},
+			    "model": "custom:bmcc_items/kit/flanker"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":33
+			},
+			    "model": "custom:bmcc_items/kit/gadgeteer"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":34
+			},
+			    "model": "custom:bmcc_items/kit/healer"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":35
+			},
+			    "model": "custom:bmcc_items/kit/scrapper"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":36
+			},
+			    "model": "custom:bmcc_items/kit/sharpshooter"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":37
+			},
+			    "model": "custom:bmcc_items/kit/trickster"
+		},
+		{
+			"predicate":
+			{
+				"custom_model_data":38
+			},
+				"model": "custom:bmcc_interface/button/button"
+		},
+		{
+			"predicate":
+			{
+				"custom_model_data":39
+			},
+				"model": "custom:bmcc_interface/button/gray"
+		},
+		{
+			"predicate":
+			{
+				"custom_model_data":40
+			},
+				"model":"custom:bmcc_interface/button/pressed"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":50
+			},
+			    "model": "custom:font/icons/dodgebolt"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":51
+			},
+			    "model": "custom:font/icons/battlebox"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":52
+			},
+			    "model": "custom:font/icons/parkourtag"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":53
+			},
+			    "model": "custom:font/icons/acerace"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":54
+			},
+			    "model": "custom:font/icons/rocketspleefrush"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":55
+			},
+			    "model": "custom:bmcc_items/sumo"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":56
+			},
+			    "model": "custom:font/icons/parkourwarrior"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":57
+			},
+			    "model": "custom:font/icons/star"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":58
+			},
+			    "model": "custom:font/icons/house"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":59
+			},
+			    "model": "custom:font/icons/crown"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":60
+			},
+			    "model": "custom:bmcc_items/settings"
+		}
+
+	]
+}

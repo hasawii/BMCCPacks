@@ -1,0 +1,35 @@
+{
+	"parent": "minecraft:block/carved_pumpkin",
+	
+	"overrides":
+	[
+       	{
+		    "predicate": 
+			{
+				"custom_model_data":1
+			},
+			    "model": "custom:gold_crown"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":2
+			},
+			    "model": "minecraft:item/witch_hat"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":3
+			},
+			    "model": "minecraft:item/headwear/santa_hat"
+		},
+                {
+		    "predicate": 
+			{
+				"custom_model_data":4
+			},
+			    "model": "custom:railroadrush/hard_hat"
+		}
+	]
+}

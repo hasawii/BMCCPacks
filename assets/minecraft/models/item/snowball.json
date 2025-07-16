@@ -1,0 +1,199 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/snowball"
+	},
+	
+	"overrides":
+	[
+       	{
+		    "predicate": 
+			{
+				"custom_model_data":1
+			},
+			    "model": "minecraft:item/slime_ball"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":2
+			},
+			    "model": "minecraft:item/flower_pot"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":3
+			},
+			    "model": "minecraft:item/redstone"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":4
+			},
+			    "model": "minecraft:item/firebomb"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":5
+			},
+			    "model": "custom:rsr/updraft_item"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":6
+			},
+			    "model": "minecraft:item/gold_ingot"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":7
+			},
+			    "model": "minecraft:item/snowball"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":8
+			},
+			    "model": "minecraft:item/megachicken"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":9
+			},
+			    "model": "minecraft:item/fox_spawn_egg"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":10
+			},
+			    "model": "custom:bmcc_items/ball_of_glowing"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":11
+			},
+			    "model": "custom:bmcc_items/ball_of_levitation"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":12
+			},
+			    "model": "custom:bmcc_items/ball_of_milk"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":13
+			},
+			    "model": "custom:bmcc_items/ball_of_regeneration"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":14
+			},
+			    "model": "custom:bmcc_items/ball_of_speed"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":15
+			},
+			    "model": "custom:bmcc_items/long_timed_ball_of_harming"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":16
+			},
+			    "model": "custom:bmcc_items/long_timed_ball_of_levitation"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":17
+			},
+			    "model": "custom:bmcc_items/short_timed_ball_of_blindness"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":18
+			},
+			    "model": "custom:bmcc_items/short_timed_ball_of_poison"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":19
+			},
+			    "model": "custom:bmcc_items/short_timed_ball_of_slowness"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":20
+			},
+			    "model": "minecraft:item/halloween/egg_sweet_spicy"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":21
+			},
+			    "model": "minecraft:item/halloween/egg_sweet_sticky"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":22
+			},
+			    "model": "minecraft:item/halloween/egg_sweet_vamp"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":23
+			},
+			    "model": "minecraft:item/halloween/egg_sweet_clone"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":24
+			},
+			    "model": "minecraft:item/christmas/pot_of_slime"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":25
+			},
+			    "model": "minecraft:item/christmas/chicken_treat"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":26
+			},
+			    "model": "minecraft:item/christmas/toy_chicken"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":27
+			},
+			    "model": "minecraft:item/christmas/drum"
+		}
+	]
+}
