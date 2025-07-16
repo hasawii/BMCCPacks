@@ -16,16 +16,10 @@ jobs:
           rm -f BMCC24-main.zip
           zip -r BMCC24-main.zip . -x ".git/*" ".github/*"
 
-      - name: Create or update GitHub Release
+      - name: Create or update GitHub Release and upload ZIP
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload ZIP to Release
-        uses: softprops/action-gh-release@v1
-        with:
           files: BMCC24-main.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
