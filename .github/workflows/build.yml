@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create ZIP
+      - name: Create ZIP excluding .git and .github
         run: |
           rm -f BMCC24-main.zip
-          zip -r BMCC24-main.zip .
+          zip -r BMCC24-main.zip . -x ".git/*" ".github/*"
 
       - name: Create or update GitHub Release
         id: create_release
