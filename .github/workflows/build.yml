@@ -1,8 +1,7 @@
 name: Build and Release BMCC24 Resource-Pack
 
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build-and-release:
@@ -16,10 +15,16 @@ jobs:
           rm -f BMCC24-main.zip
           zip -r BMCC24-main.zip . -x ".git/*" ".github/*"
 
-      - name: Create or update GitHub Release and upload ZIP
+      - name: Generate SHA-1 hash
+        run: |
+          sha1sum BMCC24-main.zip | awk '{ print $1 }' > BMCC24-main.hash.txt
+
+      - name: Upload ZIP and hash to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-          files: BMCC24-main.zip
+          files: |
+            BMCC24-main.zip
+            BMCC24-main.hash.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
