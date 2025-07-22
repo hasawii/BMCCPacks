@@ -1862,57 +1862,261 @@
             "type": "single",
             "resource": "minecraft:model_textures/christmas/winter_misc_5"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:bmcc_interface/button/button"
+            "resource": "custom:bmcc_interface/generic/teams/first/00000"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:bmcc_items/sumo"
+            "resource": "custom:bmcc_interface/generic/teams/first/00001"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:bmcc_interface/button/pressed"
+            "resource": "custom:bmcc_interface/generic/teams/first/00010"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:bmcc_interface/button/gray"
+            "resource": "custom:bmcc_interface/generic/teams/first/00011"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/dodgebolt"
+            "resource": "custom:bmcc_interface/generic/teams/first/00100"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/battlebox"
+            "resource": "custom:bmcc_interface/generic/teams/first/00101"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/parkourtag"
+            "resource": "custom:bmcc_interface/generic/teams/first/00110"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/acerace"
+            "resource": "custom:bmcc_interface/generic/teams/first/00111"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/rocketspleefrush"
+            "resource": "custom:bmcc_interface/generic/teams/first/01000"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/parkourwarrior"
+            "resource": "custom:bmcc_interface/generic/teams/first/01001"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/star"
+            "resource": "custom:bmcc_interface/generic/teams/first/01010"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/house"
+            "resource": "custom:bmcc_interface/generic/teams/first/01011"
         },
-		{
+        {
             "type": "single",
-            "resource": "custom:font/icons/crown"
+            "resource": "custom:bmcc_interface/generic/teams/first/01100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/01101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/01110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/01111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/10111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/first/11111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/00111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/01111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/10111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11000"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11001"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11010"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11011"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11100"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11101"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11110"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/generic/teams/second/11111"
         }
     ]
 }
