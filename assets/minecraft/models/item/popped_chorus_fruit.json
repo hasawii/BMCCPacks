@@ -347,7 +347,480 @@
 				"custom_model_data":60
 			},
 			    "model": "custom:bmcc_items/settings"
+		},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":800111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/00111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":801111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/01111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":810111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/10111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":811111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/first/11111"
+		},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":900111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/00111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":901111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/01111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":910111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/10111"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911000
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11000"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911001
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11001"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911010
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11010"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911011
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11011"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911100
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11100"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911101
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11101"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911110
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11110"
+		},
+		{
+		    "predicate": 
+			{
+				"custom_model_data":911111
+			},
+			    "model": "custom:bmcc_interface/generic/teams/second/11111"
 		}
+
+
+		
 
 	]
 }
