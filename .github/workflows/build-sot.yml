@@ -26,11 +26,11 @@ jobs:
 
       - name: Update readme.txt
         run: |
-          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC.
-
-          We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own. 
-
-          This pack is for BMCC $EVENT_NUM with version $VERSION" > sotPack/readme.txt"
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > sotPack/readme.txt
+          echo "" >> sotPack/readme.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> sotPack/readme.txt
+          echo "" >> sotPack/readme.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the SOT Pack" >> sotPack/readme.txt
 
       - name: Create SOT ZIP (contents only, exclude version.txt)
         run: |
