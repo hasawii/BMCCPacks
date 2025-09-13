@@ -1,0 +1,59 @@
+name: Build and Release BMCC BM Pack
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-bm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read event number and version
+        run: |
+          EVENT_NUM=$(cat bmccEventNumber.txt)
+          VERSION_FILE="bmPack/version.txt"
+          if [ ! -f "$VERSION_FILE" ]; then
+              echo "1" > "$VERSION_FILE"
+          fi
+          VERSION=$(cat "$VERSION_FILE")
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Update readme.txt
+        run: |
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > bmPack/readme.txt
+          echo "" >> bmPack/readme.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bmPack/readme.txt
+          echo "" >> bmPack/readme.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the BM Pack" >> bmPack/readme.txt
+
+      - name: Create BM ZIP
+        run: |
+          rm -f BMCC-bm.zip
+          cd bmPack
+          zip -r ../BMCC-bm.zip . -x "version.txt" ".git/*" ".github/*"
+
+      - name: Generate SHA-1 hash
+        run: |
+          sha1sum BMCC-bm.zip | awk '{ print $1 }' > BMCC-bm.hash.txt
+
+      - name: Upload BM ZIP and hash to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: bmLatest
+          files: |
+            BMCC-bm.zip
+            BMCC-bm.hash.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Increment version
+        run: |
+          NEXT=$((VERSION + 1))
+          echo $NEXT > bmPack/version.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bmPack/version.txt
+          git commit -m "Increment BM Pack version to $NEXT"
+          git push
