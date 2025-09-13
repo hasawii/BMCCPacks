@@ -9,30 +9,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Read event number and version
+      - name: Read event number and MAIN version
         run: |
-          EVENT_NUM=$(cat bmccEventNumber.txt)
-          VERSION_FILE="mainPack/version.txt"
-          if [ ! -f "$VERSION_FILE" ]; then
-              echo "1" > "$VERSION_FILE"
-          fi
-          VERSION=$(cat "$VERSION_FILE")
+          EVENT_NUM=$(head -n 1 bmccEventNumber.txt)
+          MAIN_VERSION=$(grep '^MAIN:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          NEXT_VERSION=$((MAIN_VERSION + 1))
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_ENV
 
-      - name: Update README.txt
+      - name: Update MAIN version in root file
+        run: |
+          sed -i "s/^MAIN: .*/MAIN: $NEXT_VERSION/" bmccEventNumber.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bmccEventNumber.txt
+          git commit -m "Increment MAIN Pack version to $NEXT_VERSION" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push origin main
+
+      - name: Generate README.txt
         run: |
           echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > mainPack/README.txt
           echo "" >> mainPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> mainPack/README.txt
           echo "" >> mainPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Main Pack" >> mainPack/README.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$NEXT_VERSION of the Main Pack" >> mainPack/README.txt
 
       - name: Create MAIN ZIP
         run: |
           rm -f BMCC-main.zip
           cd mainPack
-          zip -r ../BMCC-main.zip . -x "version.txt" ".git/*" ".github/*"
+          zip -r ../BMCC-main.zip . -x "README.txt" ".git/*" ".github/*"
 
       - name: Generate SHA-1 hash
         run: |
@@ -47,14 +54,3 @@ jobs:
             BMCC-main.hash.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Increment version
-        run: |
-          NEXT=$((VERSION + 1))
-          echo $NEXT > mainPack/version.txt
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add mainPack/version.txt
-          git commit -m "Increment Main Pack version to $NEXT" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push origin main
