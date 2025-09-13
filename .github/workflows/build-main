@@ -41,7 +41,7 @@ jobs:
       - name: Upload MAIN ZIP and hash to release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: latest
+          tag_name: mainLatest
           files: |
             BMCC-main.zip
             BMCC-main.hash.txt
