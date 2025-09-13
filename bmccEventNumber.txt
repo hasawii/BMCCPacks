@@ -11,8 +11,8 @@ Packs:
     SOT_HASH: 2ab3af4a7ed7ea557a238cf72b61b34edd37df53
 
   Build Mart:
-    BM: 5
-    BM_HASH: febc345ad53cb191a65a15b591ac7ca4199a180f
+    BM: 6
+    BM_HASH: 9cac37c4ef20c023ba1393560014fa5fd538fdc4
 
   Hole In The Wall:
     HITW: 1
