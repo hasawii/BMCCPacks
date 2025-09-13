@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "minecraft:block/basalt_2",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "minecraft:block/basalt_1",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "minecraft:block/basalt_3"
+    },
+    "facing=west": {
+      "model": "minecraft:block/basalt_4",
+      "y": 90
+    }
+  }
+}

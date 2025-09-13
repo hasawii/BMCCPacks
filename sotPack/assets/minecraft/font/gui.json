@@ -1,0 +1,46 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "custom:font/settings.png",
+      "chars": [""],
+      "ascent": 25,
+      "height": 256
+    },
+	{
+		"type": "bitmap",
+		"file": "custom:font/spectate.png",
+		"ascent": 33,
+		"height": 256,
+		"chars": [""]
+	},
+	{
+	  "type":"bitmap",
+	  "file":"custom:font/header.png",
+	  "chars":[""],
+	  "ascent":33,
+	  "height":36
+	},
+	{
+	  "type":"bitmap",
+	  "file":"custom:font/kit_menu.png",
+	  "chars":[""],
+	  "ascent":5,
+	  "height":127
+	},
+	{
+      "type":"bitmap",
+	  "file":"custom:font/1x3.png",
+	  "chars":[""],
+	  "ascent":-121,
+	  "height":65
+	},
+	{
+      "type":"bitmap",
+	  "file":"custom:font/spawnpoint.png",
+	  "chars":["⑳"],
+	  "ascent":37,
+	  "height":255
+	}
+  ]
+}

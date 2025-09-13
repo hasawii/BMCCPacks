@@ -1,0 +1,16 @@
+{
+	"multipart":[
+		{"when":{"down":false,"east":false,"north":false,"south":false,"up":false,"west":false},"apply":{"model":"block/noxcrew/sand_place"}},
+		{"when":{"down":false,"east":false,"north":false,"south":false,"up":true,"west":false},"apply":{"model":"block/noxcrew/sand_place", "y": 90}},
+		{"when":{"down":false,"east":false,"north":false,"south":false,"up":true,"west":true},"apply":{"model":"block/noxcrew/green_number"}},
+		{"when":{"down":false,"east":false,"north":false,"south":true,"up":true,"west":false},"apply":{"model":"block/noxcrew/green_dash"}},
+		{"when":{"down":false,"east":false,"north":false,"south":true,"up":true,"west":true},"apply":{"model":"block/noxcrew/yellow_number"}},
+		{"when":{"down":false,"east":false,"north":true,"south":false,"up":true,"west":false},"apply":{"model":"block/noxcrew/yellow_dash"}},
+		{"when":{"down":false,"east":false,"north":true,"south":false,"up":true,"west":true},"apply":{"model":"block/noxcrew/orange_number"}},
+		{"when":{"down":false,"east":true,"north":false,"south":false,"up":true,"west":false},"apply":{"model":"block/noxcrew/orange_dash"}},
+		{"when":{"down":false,"east":true,"north":false,"south":true,"up":true,"west":false},"apply":{"model":"block/noxcrew/red_number"}},
+		{"when":{"down":false,"east":true,"north":true,"south":false,"up":true,"west":false},"apply":{"model":"block/noxcrew/red_dash"}}
+	]
+}
+
+

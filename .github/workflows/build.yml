@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create ZIP excluding .git and .github
+      - name: Create ZIP from mainPack folder
         run: |
           rm -f BMCC24-main.zip
-          zip -r BMCC24-main.zip . -x ".git/*" ".github/*"
+          zip -r BMCC24-main.zip mainPack -x "mainPack/.git/*" "mainPack/.github/*"
 
       - name: Generate SHA-1 hash
         run: |
