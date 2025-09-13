@@ -1,4 +1,4 @@
-name: Build and Release BMCC SOT Pack
+name: SOT Pack
 
 on:
   workflow_dispatch:
