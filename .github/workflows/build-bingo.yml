@@ -3,57 +3,90 @@ name: BINGO Pack (DONT USE)
 on:
   workflow_dispatch:
 
+concurrency:
+  group: bingo-pack
+  cancel-in-progress: true
+
 jobs:
-  build-bingo:
+  build:
+    name: Build BINGO Pack
     runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Read event number and version
+      - name: Precompute event number and BINGO version
+        id: get_version
         run: |
-          EVENT_NUM=$(cat bmccEventNumber.txt)
-          VERSION_FILE="bingoPack/version.txt"
-          if [ ! -f "$VERSION_FILE" ]; then
-              echo "1" > "$VERSION_FILE"
-          fi
-          VERSION=$(cat "$VERSION_FILE")
-          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          BINGO_VERSION=$(grep 'BINGO:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((BINGO_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
 
-      - name: Update README.txt
+      - name: Generate README.txt
         run: |
           echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > bingoPack/README.txt
           echo "" >> bingoPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bingoPack/README.txt
           echo "" >> bingoPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Bingo Pack" >> bingoPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Bingo But Fast Pack" >> bingoPack/README.txt
 
       - name: Create BINGO ZIP
         run: |
           rm -f BMCC-bingo.zip
           cd bingoPack
-          zip -r ../BMCC-bingo.zip . -x "version.txt" ".git/*" ".github/*"
+          zip -r ../BMCC-bingo.zip . -x ".git/*" ".github/*"
+          cd ..
 
-      - name: Generate SHA-1 hash
+      - name: Compute SHA-1 hash and save as artifact
         run: |
-          sha1sum BMCC-bingo.zip | awk '{ print $1 }' > BMCC-bingo.hash.txt
+          SHA1=$(sha1sum BMCC-bingo.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-bingo.hash
 
-      - name: Upload BINGO ZIP and hash to release
+      - name: Upload BINGO ZIP to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: bingoLatest
-          files: |
-            BMCC-bingo.zip
-            BMCC-bingo.hash.txt
+          files: BMCC-bingo.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Increment version
+      - name: Upload hash artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bingo-hash
+          path: bmcc-bingo.hash
+
+  update-version-and-hash:
+    name: Update BINGO Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download hash artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: bingo-hash
+          path: .
+
+      - name: Update BINGO version and hash in root file
         run: |
-          NEXT=$((VERSION + 1))
-          echo $NEXT > bingoPack/version.txt
+          git pull origin main
+          SHA1=$(cat bmcc-bingo.hash)
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
+          sed -i "s/^[[:space:]]*BINGO:.*/    BINGO: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*BINGO_HASH:.*/    BINGO_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bingoPack/version.txt
-          git commit -m "Increment Bingo Pack version to $NEXT"
-          git push
+          git add bmccEventNumber.txt
+          git commit -m "Increment BINGO version to $NEXT_VERSION and update hash"
+          git push origin main
