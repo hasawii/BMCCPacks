@@ -1,4 +1,4 @@
-name: (DONT USE) Build and Release BMCC Bingo Pack
+name: BINGO Pack (DONT USE)
 
 on:
   workflow_dispatch:
