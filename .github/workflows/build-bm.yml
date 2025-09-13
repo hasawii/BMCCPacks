@@ -16,23 +16,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Read event number and BM version
+      - name: Read event number
         run: |
           EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
-          BM_VERSION=$(grep 'BM:' -A1 bmccEventNumber.txt | head -n1 | awk '{print $2}')
-          NEXT_VERSION=$((BM_VERSION + 1))
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
-          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_ENV
-
-      - name: Increment BM version in root file
-        run: |
-          sed -i "s/^[[:space:]]*BM:.*/    BM: $NEXT_VERSION/" bmccEventNumber.txt
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bmccEventNumber.txt
-          git commit -m "Increment BM Pack version to $NEXT_VERSION" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push origin main
 
       - name: Generate README.txt
         run: |
@@ -40,7 +27,7 @@ jobs:
           echo "" >> bmPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bmPack/README.txt
           echo "" >> bmPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$NEXT_VERSION of the Build Mart Pack" >> bmPack/README.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #PLACEHOLDER of the Build Mart Pack" >> bmPack/README.txt
 
       - name: Create BM ZIP
         run: |
@@ -69,8 +56,8 @@ jobs:
           name: bm-hash
           path: bmcc-bm.hash
 
-  update-hash:
-    name: Update BM Pack Hash
+  update-version-and-hash:
+    name: Update BM Version and Hash
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -84,13 +71,16 @@ jobs:
           name: bm-hash
           path: .
 
-      - name: Update BM_HASH in root file
+      - name: Update BM version and hash
         run: |
+          git pull origin main
           SHA1=$(cat bmcc-bm.hash)
+          BM_VERSION=$(grep 'BM:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((BM_VERSION + 1))
+          sed -i "s/^[[:space:]]*BM:.*/    BM: $NEXT_VERSION/" bmccEventNumber.txt
           sed -i "s/^[[:space:]]*BM_HASH:.*/    BM_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bmccEventNumber.txt
-          git commit -m "Update BM Pack hash" || echo "No changes to commit"
-          git pull --rebase origin main
+          git commit -m "Increment BM version to $NEXT_VERSION and update hash"
           git push origin main
