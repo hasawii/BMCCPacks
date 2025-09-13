@@ -11,7 +11,7 @@ Packs:
     SOT_HASH:
 
   Build Mart:
-    BM: 2
+    BM: 3
     BM_HASH: 
 
   Hole In The Wall:
