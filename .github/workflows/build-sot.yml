@@ -11,28 +11,24 @@ jobs:
 
       - name: Read event number and version
         run: |
-          # Event number from root file
           EVENT_NUM=$(cat bmccEventNumber.txt)
-          
-          # Version number from inside pack folder
           VERSION_FILE="sotPack/version.txt"
           if [ ! -f "$VERSION_FILE" ]; then
               echo "1" > "$VERSION_FILE"
           fi
           VERSION=$(cat "$VERSION_FILE")
-
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Update README.txt
+      - name: Update readme.txt
         run: |
-          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > sotPack/README.txt
-          echo "" >> sotPack/README.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> sotPack/README.txt
-          echo "" >> sotPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the SOT Pack" >> sotPack/README.txt
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > sotPack/readme.txt
+          echo "" >> sotPack/readme.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> sotPack/readme.txt
+          echo "" >> sotPack/readme.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the SOT Pack" >> sotPack/readme.txt
 
-      - name: Create SOT ZIP (contents only, exclude version.txt)
+      - name: Create SOT ZIP
         run: |
           rm -f BMCC-sot.zip
           cd sotPack
@@ -56,3 +52,8 @@ jobs:
         run: |
           NEXT=$((VERSION + 1))
           echo $NEXT > sotPack/version.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sotPack/version.txt
+          git commit -m "Increment SOT pack version to $NEXT"
+          git push
