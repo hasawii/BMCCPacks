@@ -1,4 +1,4 @@
-name: (DONT USE) Build and Release BMCC HITW Pack
+name: HITW Pack (DONT USE)
 
 on:
   workflow_dispatch:
