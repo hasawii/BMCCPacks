@@ -3,57 +3,90 @@ name: SOT Pack
 on:
   workflow_dispatch:
 
+concurrency:
+  group: sot-pack
+  cancel-in-progress: true
+
 jobs:
-  build-sot:
+  build:
+    name: Build SOT Pack
     runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Read event number and version
+      - name: Precompute event number and SOT version
+        id: get_version
         run: |
-          EVENT_NUM=$(cat bmccEventNumber.txt)
-          VERSION_FILE="sotPack/version.txt"
-          if [ ! -f "$VERSION_FILE" ]; then
-              echo "1" > "$VERSION_FILE"
-          fi
-          VERSION=$(cat "$VERSION_FILE")
-          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          SOT_VERSION=$(grep 'SOT:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((SOT_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
 
-      - name: Update README.txt
+      - name: Generate README.txt
         run: |
           echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > sotPack/README.txt
           echo "" >> sotPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> sotPack/README.txt
           echo "" >> sotPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the SOT Pack" >> sotPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Sands Of Time Pack" >> sotPack/README.txt
 
       - name: Create SOT ZIP
         run: |
           rm -f BMCC-sot.zip
           cd sotPack
-          zip -r ../BMCC-sot.zip . -x "version.txt" ".git/*" ".github/*"
+          zip -r ../BMCC-sot.zip . -x ".git/*" ".github/*"
+          cd ..
 
-      - name: Generate SHA-1 hash
+      - name: Compute SHA-1 hash and save as artifact
         run: |
-          sha1sum BMCC-sot.zip | awk '{ print $1 }' > BMCC-sot.hash.txt
+          SHA1=$(sha1sum BMCC-sot.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-sot.hash
 
-      - name: Upload SOT ZIP and hash to release
+      - name: Upload SOT ZIP to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: sotLatest
-          files: |
-            BMCC-sot.zip
-            BMCC-sot.hash.txt
+          files: BMCC-sot.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Increment version
+      - name: Upload hash artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sot-hash
+          path: bmcc-sot.hash
+
+  update-version-and-hash:
+    name: Update SOT Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download hash artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: sot-hash
+          path: .
+
+      - name: Update SOT version and hash in root file
         run: |
-          NEXT=$((VERSION + 1))
-          echo $NEXT > sotPack/version.txt
+          git pull origin main
+          SHA1=$(cat bmcc-sot.hash)
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
+          sed -i "s/^[[:space:]]*SOT:.*/    SOT: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*SOT_HASH:.*/    SOT_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sotPack/version.txt
-          git commit -m "Increment SOT pack version to $NEXT"
-          git push
+          git add bmccEventNumber.txt
+          git commit -m "Increment SOT version to $NEXT_VERSION and update hash"
+          git push origin main
