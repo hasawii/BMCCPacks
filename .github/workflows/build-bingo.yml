@@ -1,4 +1,4 @@
-name: BINGO Pack (DONT USE)
+name: Build and Release BMCC Bingo Pack
 
 on:
   workflow_dispatch:
@@ -20,13 +20,13 @@ jobs:
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Update readme.txt
+      - name: Update README.txt
         run: |
-          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > bingoPack/readme.txt
-          echo "" >> bingoPack/readme.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bingoPack/readme.txt
-          echo "" >> bingoPack/readme.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Bingo Pack" >> bingoPack/readme.txt
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > bingoPack/README.txt
+          echo "" >> bingoPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bingoPack/README.txt
+          echo "" >> bingoPack/README.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Bingo Pack" >> bingoPack/README.txt
 
       - name: Create BINGO ZIP
         run: |
@@ -39,4 +39,21 @@ jobs:
           sha1sum BMCC-bingo.zip | awk '{ print $1 }' > BMCC-bingo.hash.txt
 
       - name: Upload BINGO ZIP and hash to release
-        uses: softprops/action-gh
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: bingoLatest
+          files: |
+            BMCC-bingo.zip
+            BMCC-bingo.hash.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Increment version
+        run: |
+          NEXT=$((VERSION + 1))
+          echo $NEXT > bingoPack/version.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bingoPack/version.txt
+          git commit -m "Increment Bingo Pack version to $NEXT"
+          git push
