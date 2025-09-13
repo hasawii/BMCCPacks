@@ -12,7 +12,7 @@ Packs:
 
   Build Mart:
     BM: 1
-    BM_HASH:
+    BM_HASH: 
 
   Hole In The Wall:
     HITW: 1
