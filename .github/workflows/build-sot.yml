@@ -1,0 +1,29 @@
+name: Build and Release BMCC24 SOT Pack
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-sot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create SOT ZIP
+        run: |
+          rm -f BMCC24-sot.zip
+          zip -r BMCC24-sot.zip sotPack -x "sotPack/.git/*" "sotPack/.github/*"
+
+      - name: Generate SHA-1 hash
+        run: |
+          sha1sum BMCC24-sot.zip | awk '{ print $1 }' > BMCC24-sot.hash.txt
+
+      - name: Upload SOT ZIP and hash to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: sotLatest
+          files: |
+            BMCC24-sot.zip
+            BMCC24-sot.hash.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
