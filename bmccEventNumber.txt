@@ -1,1 +1,6 @@
 25
+MAIN: 1
+SOT: 1
+BM: 1
+HITW: 1
+BINGO: 1
