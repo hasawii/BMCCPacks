@@ -20,13 +20,13 @@ jobs:
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Update readme.txt
+      - name: Update README.txt
         run: |
-          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > mainPack/readme.txt
-          echo "" >> mainPack/readme.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> mainPack/readme.txt
-          echo "" >> mainPack/readme.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Main Pack" >> mainPack/readme.txt
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > mainPack/README.txt
+          echo "" >> mainPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> mainPack/README.txt
+          echo "" >> mainPack/README.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the Main Pack" >> mainPack/README.txt
 
       - name: Create MAIN ZIP
         run: |
