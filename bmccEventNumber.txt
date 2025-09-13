@@ -1,6 +1,23 @@
-25
-MAIN: 4
-SOT: 1
-BM: 1
-HITW: 1
-BINGO: 1
+eventNumber: 25
+
+Packs:
+
+  Main:
+    MAIN: 1
+    MAIN_HASH: 
+
+  Sands Of Time:
+    SOT: 1
+    SOT_HASH:
+
+  Build Mart:
+    BM: 1
+    BM_HASH:
+
+  Hole In The Wall:
+    HITW: 1
+    HITW_HASH:
+
+  Bingo But Fast:
+    BINGO: 1
+    BINGO_HASH:
