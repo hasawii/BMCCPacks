@@ -11,23 +11,30 @@ jobs:
   build:
     name: Build BM Pack
     runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Read event number
+      - name: Precompute event number and next BM version
+        id: get_version
         run: |
           EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
-          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
+          BM_VERSION=$(grep 'BM:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((BM_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
 
-      - name: Generate README.txt
+      - name: Create README.txt placeholder
         run: |
           echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > bmPack/README.txt
           echo "" >> bmPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> bmPack/README.txt
           echo "" >> bmPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #PLACEHOLDER of the Build Mart Pack" >> bmPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Build Mart Pack" >> bmPack/README.txt
 
       - name: Create BM ZIP
         run: |
@@ -45,8 +52,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: bmLatest
-          files: |
-            BMCC-bm.zip
+          files: BMCC-bm.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -71,12 +77,12 @@ jobs:
           name: bm-hash
           path: .
 
-      - name: Update BM version and hash
+      - name: Update BM version and hash in root file
         run: |
           git pull origin main
           SHA1=$(cat bmcc-bm.hash)
-          BM_VERSION=$(grep 'BM:' bmccEventNumber.txt | awk '{print $2}')
-          NEXT_VERSION=$((BM_VERSION + 1))
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
           sed -i "s/^[[:space:]]*BM:.*/    BM: $NEXT_VERSION/" bmccEventNumber.txt
           sed -i "s/^[[:space:]]*BM_HASH:.*/    BM_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
