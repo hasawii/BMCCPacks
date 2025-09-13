@@ -1,4 +1,4 @@
-name: Build and Release BMCC Main Pack
+name: Main Pack
 
 on:
   workflow_dispatch:
