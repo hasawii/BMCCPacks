@@ -9,21 +9,24 @@ concurrency:
 
 jobs:
   build:
+    name: Build BM Pack
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Read event number and BM version
         run: |
           EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
-          BM_VERSION=$(grep 'BM_VERSION:' -A1 bmccEventNumber.txt | head -n1 | awk '{print $2}')
+          BM_VERSION=$(grep 'BM:' -A1 bmccEventNumber.txt | head -n1 | awk '{print $2}')
           NEXT_VERSION=$((BM_VERSION + 1))
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
           echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_ENV
 
       - name: Increment BM version in root file
         run: |
-          sed -i "s/^\s*BM_VERSION: .*/    BM_VERSION: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*BM:.*/    BM: $NEXT_VERSION/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bmccEventNumber.txt
@@ -43,7 +46,7 @@ jobs:
         run: |
           rm -f BMCC-bm.zip
           cd bmPack
-          zip -r ../BMCC-bm.zip . -x "README.txt" ".git/*" ".github/*"
+          zip -r ../BMCC-bm.zip . -x ".git/*" ".github/*"
           cd ..
 
       - name: Upload BM ZIP to release
@@ -56,15 +59,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   update-hash:
+    name: Update BM Pack Hash
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Compute SHA-1 hash of BM ZIP
+      - name: Compute SHA-1 hash and update root file
         run: |
           SHA1=$(sha1sum BMCC-bm.zip | awk '{ print $1 }')
-          sed -i "s/^\s*BM_HASH:.*/    BM_HASH: $SHA1/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*BM_HASH:.*/    BM_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bmccEventNumber.txt
