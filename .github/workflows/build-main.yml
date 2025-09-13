@@ -1,4 +1,4 @@
-name: Main Pack
+name: MAIN Pack
 
 on:
   workflow_dispatch:
