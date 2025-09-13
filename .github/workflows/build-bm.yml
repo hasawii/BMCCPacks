@@ -21,7 +21,7 @@ jobs:
           echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
           echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_ENV
 
-      - name: Update BM version in root file
+      - name: Increment BM version in root file
         run: |
           sed -i "s/^\s*BM_VERSION: .*/    BM_VERSION: $NEXT_VERSION/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
