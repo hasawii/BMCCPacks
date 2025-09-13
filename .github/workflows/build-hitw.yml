@@ -3,57 +3,90 @@ name: HITW Pack (DONT USE)
 on:
   workflow_dispatch:
 
+concurrency:
+  group: hitw-pack
+  cancel-in-progress: true
+
 jobs:
-  build-hitw:
+  build:
+    name: Build HITW Pack
     runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Read event number and version
+      - name: Precompute event number and HITW version
+        id: get_version
         run: |
-          EVENT_NUM=$(cat bmccEventNumber.txt)
-          VERSION_FILE="hitwPack/version.txt"
-          if [ ! -f "$VERSION_FILE" ]; then
-              echo "1" > "$VERSION_FILE"
-          fi
-          VERSION=$(cat "$VERSION_FILE")
-          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          HITW_VERSION=$(grep 'HITW:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((HITW_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
 
-      - name: Update README.txt
+      - name: Generate README.txt
         run: |
           echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > hitwPack/README.txt
           echo "" >> hitwPack/README.txt
           echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> hitwPack/README.txt
           echo "" >> hitwPack/README.txt
-          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the HITW Pack" >> hitwPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Hole In The Wall Pack" >> hitwPack/README.txt
 
       - name: Create HITW ZIP
         run: |
           rm -f BMCC-hitw.zip
           cd hitwPack
-          zip -r ../BMCC-hitw.zip . -x "version.txt" ".git/*" ".github/*"
+          zip -r ../BMCC-hitw.zip . -x ".git/*" ".github/*"
+          cd ..
 
-      - name: Generate SHA-1 hash
+      - name: Compute SHA-1 hash and save as artifact
         run: |
-          sha1sum BMCC-hitw.zip | awk '{ print $1 }' > BMCC-hitw.hash.txt
+          SHA1=$(sha1sum BMCC-hitw.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-hitw.hash
 
-      - name: Upload HITW ZIP and hash to release
+      - name: Upload HITW ZIP to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: hitwLatest
-          files: |
-            BMCC-hitw.zip
-            BMCC-hitw.hash.txt
+          files: BMCC-hitw.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Increment version
+      - name: Upload hash artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hitw-hash
+          path: bmcc-hitw.hash
+
+  update-version-and-hash:
+    name: Update HITW Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download hash artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hitw-hash
+          path: .
+
+      - name: Update HITW version and hash in root file
         run: |
-          NEXT=$((VERSION + 1))
-          echo $NEXT > hitwPack/version.txt
+          git pull origin main
+          SHA1=$(cat bmcc-hitw.hash)
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
+          sed -i "s/^[[:space:]]*HITW:.*/    HITW: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*HITW_HASH:.*/    HITW_HASH: $SHA1/" bmccEventNumber.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add hitwPack/version.txt
-          git commit -m "Increment HITW Pack version to $NEXT"
-          git push
+          git add bmccEventNumber.txt
+          git commit -m "Increment HITW version to $NEXT_VERSION and update hash"
+          git push origin main
