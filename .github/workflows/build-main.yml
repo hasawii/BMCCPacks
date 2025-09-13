@@ -3,6 +3,10 @@ name: MAIN Pack
 on:
   workflow_dispatch:
 
+concurrency:
+  group: main-pack
+  cancel-in-progress: true
+
 jobs:
   build-main-pack:
     runs-on: ubuntu-latest
