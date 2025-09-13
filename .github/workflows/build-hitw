@@ -1,0 +1,59 @@
+name: Build and Release BMCC HITW Pack
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-hitw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read event number and version
+        run: |
+          EVENT_NUM=$(cat bmccEventNumber.txt)
+          VERSION_FILE="hitwPack/version.txt"
+          if [ ! -f "$VERSION_FILE" ]; then
+              echo "1" > "$VERSION_FILE"
+          fi
+          VERSION=$(cat "$VERSION_FILE")
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Update readme.txt
+        run: |
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > hitwPack/readme.txt
+          echo "" >> hitwPack/readme.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> hitwPack/readme.txt
+          echo "" >> hitwPack/readme.txt
+          echo "This pack is for BMCC $EVENT_NUM as version #$VERSION of the HITW Pack" >> hitwPack/readme.txt
+
+      - name: Create HITW ZIP
+        run: |
+          rm -f BMCC-hitw.zip
+          cd hitwPack
+          zip -r ../BMCC-hitw.zip . -x "version.txt" ".git/*" ".github/*"
+
+      - name: Generate SHA-1 hash
+        run: |
+          sha1sum BMCC-hitw.zip | awk '{ print $1 }' > BMCC-hitw.hash.txt
+
+      - name: Upload HITW ZIP and hash to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: hitwLatest
+          files: |
+            BMCC-hitw.zip
+            BMCC-hitw.hash.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Increment version
+        run: |
+          NEXT=$((VERSION + 1))
+          echo $NEXT > hitwPack/version.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add hitwPack/version.txt
+          git commit -m "Increment HITW Pack version to $NEXT"
+          git push
