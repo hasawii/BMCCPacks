@@ -77,6 +77,13 @@
 	  "ascent":26,
 	  "height":26
         },
+	{
+	  "type":"bitmap",
+	  "file":"custom:font/gui_backseater_small.png",
+	  "chars":[""],
+	  "ascent":26,
+	  "height":26
+        },
         {
           "type":"bitmap",
           "file":"custom:font/tooltips/consumable.png",
