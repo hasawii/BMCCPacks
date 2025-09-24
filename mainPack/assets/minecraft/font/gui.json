@@ -10,8 +10,8 @@
 	{
 		"type": "bitmap",
 		"file": "custom:font/grid_5x7_break.png",
-		"ascent": 22,
-		"height": 256,
+		"ascent": 5,
+		"height": 127,
 		"chars": [""]
 	},
 	{
