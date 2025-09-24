@@ -1908,6 +1908,10 @@
         },
         {
             "type": "single",
+            "resource": "custom:bmcc_interface/settings/chat_bubble_blue.png"
+        },
+        {
+            "type": "single",
             "resource": "custom:bmcc_interface/generic/teams/first/00000"
         },
         {
