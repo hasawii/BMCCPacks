@@ -1619,6 +1619,14 @@
         },
 		{
             "type": "single",
+            "resource": "custom:font/icons/coin"
+        },
+		{
+            "type": "single",
+            "resource": "custom:font/icons/decisiondome"
+        },
+		{
+            "type": "single",
             "resource": "custom:bmcc_items/sumo"
         },
 		{
