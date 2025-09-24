@@ -1908,7 +1908,7 @@
         },
         {
             "type": "single",
-            "resource": "custom:bmcc_interface/settings/chat_bubble_blue.png"
+            "resource": "custom:bmcc_interface/settings/chat_bubble_blue"
         },
         {
             "type": "single",
