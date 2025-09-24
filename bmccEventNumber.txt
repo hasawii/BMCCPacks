@@ -3,8 +3,8 @@ eventNumber: 25
 Packs:
 
   Main:
-    MAIN: 2
-    MAIN_HASH: 6700ca5f474415566292323ac5437dc80b91b53c
+    MAIN: 3
+    MAIN_HASH: bace29434b5747629fd9e0ca7d9c736d45dc6a27
 
   Sands Of Time:
     SOT: 1
