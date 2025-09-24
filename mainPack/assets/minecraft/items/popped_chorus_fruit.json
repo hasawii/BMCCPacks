@@ -344,6 +344,20 @@
                 }
             },
             {
+                "threshold": 100,
+                "model": {
+                    "type": "model",
+                    "model": "custom:font/icons/coin"
+                }
+            },
+            {
+                "threshold": 101,
+                "model": {
+                    "type": "model",
+                    "model": "custom:font/icons/decisiondome"
+                }
+            },
+            {
                 "threshold": 60,
                 "model": {
                     "type": "model",
