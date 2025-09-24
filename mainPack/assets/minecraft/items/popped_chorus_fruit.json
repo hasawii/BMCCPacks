@@ -351,6 +351,20 @@
                 }
             },
             {
+                "threshold": 61,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/toggle/toggle_on"
+                }
+            },
+            {
+                "threshold": 62,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/toggle/toggle_off"
+                }
+            },
+            {
                 "threshold": 800000,
                 "model": {
                     "type": "model",
