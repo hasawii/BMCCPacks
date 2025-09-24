@@ -47,21 +47,21 @@
 	  "file":"custom:font/0.png",
 	  "chars":[""],
 	  "ascent":-121,
-	  "height":65
+	  "height":17
 	},
 	{
       "type":"bitmap",
 	  "file":"custom:font/0_low.png",
 	  "chars":[""],
-	  "ascent":-121,
-	  "height":65
+	  "ascent":-202,
+	  "height":17
 	},
 	{
       "type":"bitmap",
 	  "file":"custom:font/0_wide.png",
 	  "chars":[""],
 	  "ascent":-121,
-	  "height":65
+	  "height":17
 	},
 	{
       "type":"bitmap",
