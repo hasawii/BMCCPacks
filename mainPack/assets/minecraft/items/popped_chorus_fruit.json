@@ -365,6 +365,13 @@
                 }
             },
             {
+                "threshold": 63,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/settings/chat_bubble_blue"
+                }
+            },
+            {
                 "threshold": 800000,
                 "model": {
                     "type": "model",
