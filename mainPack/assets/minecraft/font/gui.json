@@ -9,6 +9,13 @@
     },
 	{
 		"type": "bitmap",
+		"file": "custom:font/grid_5x7_break.png",
+		"ascent": 22,
+		"height": 256,
+		"chars": [""]
+	},
+	{
+		"type": "bitmap",
 		"file": "custom:font/spectate.png",
 		"ascent": 33,
 		"height": 256,
@@ -32,6 +39,27 @@
       "type":"bitmap",
 	  "file":"custom:font/1x3.png",
 	  "chars":[""],
+	  "ascent":-121,
+	  "height":65
+	},
+	{
+      "type":"bitmap",
+	  "file":"custom:font/0.png",
+	  "chars":[""],
+	  "ascent":-121,
+	  "height":65
+	},
+	{
+      "type":"bitmap",
+	  "file":"custom:font/0_low.png",
+	  "chars":[""],
+	  "ascent":-121,
+	  "height":65
+	},
+	{
+      "type":"bitmap",
+	  "file":"custom:font/0_wide.png",
+	  "chars":[""],
 	  "ascent":-121,
 	  "height":65
 	},
