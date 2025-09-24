@@ -2161,6 +2161,14 @@
         {
             "type": "single",
             "resource": "custom:bmcc_interface/generic/teams/second/11111"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/toggle/toggle_on"
+        },
+        {
+            "type": "single",
+            "resource": "custom:bmcc_interface/toggle/toggle_off"
         }
     ]
 }
