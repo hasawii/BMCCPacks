@@ -43,6 +43,20 @@
 	  "height":127
 	},
 	{
+	  "type":"bitmap",
+	  "file":"custom:font/cosmetic_profiles.png",
+	  "chars":[""],
+	  "ascent":5,
+	  "height":127
+	},
+	{
+	  "type":"bitmap",
+	  "file":"custom:font/grid_small.png",
+	  "chars":[""],
+	  "ascent":5,
+	  "height":127
+	},
+	{
       "type":"bitmap",
 	  "file":"custom:font/1x3.png",
 	  "chars":[""],
