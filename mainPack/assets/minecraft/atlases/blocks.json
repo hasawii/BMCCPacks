@@ -2181,6 +2181,42 @@
         {
             "type": "single",
             "resource": "custom:bmcc_interface/toggle/toggle_off"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/buildmart"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/gridrunners"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/holeinthewall"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/meltdown"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/railroadrush"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/sandsoftime"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/survivalgames"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/skybattle"
+        },
+        {
+            "type": "single",
+            "resource": "custom:font/icons/tgttos"
         }
     ]
 }
