@@ -51,6 +51,20 @@
 	},
 	{
 	  "type":"bitmap",
+	  "file":"custom:font/games_menu.png",
+	  "chars":[""],
+	  "ascent":5,
+	  "height":127
+	},
+	{
+	  "type":"bitmap",
+	  "file":"custom:font/dome_menu.png",
+	  "chars":[""],
+	  "ascent":5,
+	  "height":127
+	},
+	{
+	  "type":"bitmap",
 	  "file":"custom:font/grid_small.png",
 	  "chars":[""],
 	  "ascent":5,
