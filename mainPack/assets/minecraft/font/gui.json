@@ -52,14 +52,14 @@
 	{
 	  "type":"bitmap",
 	  "file":"custom:font/games_menu.png",
-	  "chars":[""],
+	  "chars":[""],
 	  "ascent":5,
 	  "height":127
 	},
 	{
 	  "type":"bitmap",
 	  "file":"custom:font/dome_menu.png",
-	  "chars":[""],
+	  "chars":[""],
 	  "ascent":5,
 	  "height":127
 	},
