@@ -1,0 +1,92 @@
+name: Halloweenfied Main Pack
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: hmain-pack
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build MAIN HALLOWEEN Pack
+    runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Precompute event number and next HMAIN version
+        id: get_version
+        run: |
+          EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          HMAIN_VERSION=$(grep 'HMAIN:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((HMAIN_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
+
+      - name: Create README.txt placeholder
+        run: |
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > mainHalloweenPack/README.txt
+          echo "" >> mainHalloweenPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> mainHalloweenPack/README.txt
+          echo "" >> mainHalloweenPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Halloweenfied Main Pack" >> mainHalloweenPack/README.txt
+
+      - name: Create HALLOWEEN MAIN ZIP
+        run: |
+          rm -f BMCC-hMain.zip
+          cd mainHalloweenPack
+          zip -r ../BMCC-hMain.zip . -x ".git/*" ".github/*"
+          cd ..
+
+      - name: Compute SHA-1 hash and save as artifact
+        run: |
+          SHA1=$(sha1sum BMCC-hMain.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-hmain.hash
+
+      - name: Upload HALLOWEEN MAIN ZIP to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: hMainLatest
+          files: BMCC-hMain.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload hash artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hmain-hash
+          path: bmcc-hmain.hash
+
+  update-version-and-hash:
+    name: Update HMAIN Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download hash artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hmain-hash
+          path: .
+
+      - name: Update HMAIN version and hash in root file
+        run: |
+          git pull origin main
+          SHA1=$(cat bmcc-hmain.hash)
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
+          sed -i "s/^[[:space:]]*HMAIN:.*/    HMAIN: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*HMAIN_HASH:.*/    HMAIN_HASH: $SHA1/" bmccEventNumber.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bmccEventNumber.txt
+          git commit -m "Increment HMAIN version to $NEXT_VERSION and update hash"
+          git push origin main
