@@ -21,3 +21,7 @@ Packs:
   Bingo But Fast:
     BINGO: 0
     BINGO_HASH:
+
+  Main Halloween:
+    HMAIN: 0
+    HMAIN_HASH:
