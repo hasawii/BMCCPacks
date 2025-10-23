@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "frankenstein_head",
+		"0": "pinkparrots_head",
 		"particle": "frankenstein_head"
 	},
 	"elements": [

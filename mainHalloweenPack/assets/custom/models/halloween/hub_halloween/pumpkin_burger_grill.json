@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "minecraft:model_textures/block/halloween/jack_o_burger",
 		"1": "minecraft:model_textures/block/halloween/grill_smoke",
-		"particle": "minecraft:model_textures/block/halloween/grill_smoke"
+		"particle": "minecraft:model_textures/hub/grill_smoke"
 	},
 	"elements": [
 		{

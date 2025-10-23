@@ -27870,7 +27870,7 @@
         },
 		{
             "file": "custom:font/emojis/face_with_3_hearts.png",
-            "chars": [
+            "chars": [t
                 "🥰"
             ],
             "height": 8,
