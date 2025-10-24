@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "purplepandas_head",
+		"0": "minecraft:model_textures/dodgebolt/purplepandas_head",
 		"particle": "vampire_head"
 	},
 	"elements": [
