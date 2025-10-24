@@ -1,6 +1,7 @@
 {
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
+	"oversized_in_gui": true,
 	"textures": {
 		"0": "custom:bmcc_interface/generic/select/00010",
 		"particle": "custom:bmcc_interface/generic/select/00001"

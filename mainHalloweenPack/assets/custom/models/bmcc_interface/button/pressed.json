@@ -1,6 +1,7 @@
 {
 	"format_version": "1.21.8",
 	"credit": "Made with Blockbench",
+	"oversized_in_gui": true,
 	"textures": {
 		"1": "custom:bmcc_interface/button/pressed",
 		"particle": "custom:bmcc_interface/button/pressed"
