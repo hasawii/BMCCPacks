@@ -2220,23 +2220,23 @@
         },
         {
             "type": "single",
-            "resource": "mcc:island_interface/generic/select/10000"
+            "resource": "custom:bmcc_interface/generic/select/10000"
         },
         {
             "type": "single",
-            "resource": "mcc:island_interface/generic/select/01000"
+            "resource": "custom:bmcc_interface/generic/select/01000"
         },
         {
             "type": "single",
-            "resource": "mcc:island_interface/generic/select/00100"
+            "resource": "custom:bmcc_interface/generic/select/00100"
         },
         {
             "type": "single",
-            "resource": "mcc:island_interface/generic/select/00010"
+            "resource": "custom:bmcc_interface/generic/select/00010"
         },
         {
             "type": "single",
-            "resource": "mcc:island_interface/generic/select/00001"
+            "resource": "custom:bmcc_interface/generic/select/00001"
         }
     ]
 }
