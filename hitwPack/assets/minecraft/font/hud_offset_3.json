@@ -1,0 +1,12 @@
+{"providers":[
+{
+            "file": "invisiblecharacters:pixel.png",
+            "chars": [
+              "⅚"
+            ],
+            "height": 8,
+            "ascent": -2147483648,
+            "type": "bitmap"
+        },
+
+{"type":"space","advances":{" ":4}},{"type":"ttf","file":"minecraft:hud.ttf","shift":[0.0,3.75],"size":7,"oversample":4}]}

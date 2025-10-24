@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "minecraft:block/hitw_floor",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "minecraft:block/hitw_floor",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "minecraft:block/hitw_floor",
+    },
+    "facing=west": {
+      "model": "minecraft:block/hitw_floor",
+      "y": 90
+    }
+  }
+}
