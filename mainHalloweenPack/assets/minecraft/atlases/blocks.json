@@ -2237,6 +2237,18 @@
         {
             "type": "single",
             "resource": "custom:bmcc_interface/generic/select/00001"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/button/button"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/button/gray"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/button/pressed"
         }
     ]
 }

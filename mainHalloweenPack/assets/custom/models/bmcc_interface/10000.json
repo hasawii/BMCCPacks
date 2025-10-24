@@ -1,1 +1,33 @@
-{"textures":{"texture":"custom:bmcc_interface/generic/select/10000"},"parent":"custom:bmcc_interface/parent/parent_90x90_checkmark_column"}
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "custom:bmcc_interface/generic/select/10000",
+		"particle": "custom:bmcc_interface/generic/select/00001"
+	},
+	"elements": [
+		{
+			"from": [-16, -16, 15.9375],
+			"to": [32, 32, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3.2, 16, 15.96875]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#missing"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#missing"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"firstperson_lefthand": {
+			"scale": [0.0001, 0.0001, 0.0001]
+		},
+		"gui": {
+			"translation": [-75, 72, 0],
+			"scale": [2.66, 2.66, 2.25]
+		}
+	}
+}
