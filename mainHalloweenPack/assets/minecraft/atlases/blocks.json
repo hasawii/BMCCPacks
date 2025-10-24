@@ -2217,6 +2217,26 @@
         {
             "type": "single",
             "resource": "custom:font/icons/tgttos"
+        },
+        {
+            "type": "single",
+            "resource": "mcc:island_interface/generic/select/10000"
+        },
+        {
+            "type": "single",
+            "resource": "mcc:island_interface/generic/select/01000"
+        },
+        {
+            "type": "single",
+            "resource": "mcc:island_interface/generic/select/00100"
+        },
+        {
+            "type": "single",
+            "resource": "mcc:island_interface/generic/select/00010"
+        },
+        {
+            "type": "single",
+            "resource": "mcc:island_interface/generic/select/00001"
         }
     ]
 }
