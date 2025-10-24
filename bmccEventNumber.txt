@@ -23,5 +23,5 @@ Packs:
     BINGO_HASH:
 
   Main Halloween:
-    HMAIN: 5
-    HMAIN_HASH: 6e162a585a9b78877e54e6ef2ad55919752a8dc1
+    HMAIN: 6
+    HMAIN_HASH: b63235fa16dd428e3fa7ca8ee905ac4d8a7e7662
