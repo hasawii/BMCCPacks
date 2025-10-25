@@ -27718,7 +27718,7 @@
 		{
             "file": "custom:font/emojis/peace.png",
             "chars": [
-                "✌️"
+                ""
             ],
             "height": 8,
             "ascent": 8,
@@ -27772,7 +27772,7 @@
 		{
             "file": "custom:font/emojis/kissing.png",
             "chars": [
-                "😘"
+                "😗"
             ],
             "height": 8,
             "ascent": 8,
@@ -27875,6 +27875,33 @@
             ],
             "height": 8,
             "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/candy.png",
+            "chars": [
+                "❋"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/locked.png",
+            "chars": [
+                "✣"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/marker_candy.png",
+            "chars": [
+                "⩥"
+            ],
+            "height": 31,
+            "ascent": 30,
             "type": "bitmap"
         }
     ]

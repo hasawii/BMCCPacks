@@ -26780,15 +26780,6 @@
             "type": "bitmap"
         },
         {
-            "file": "custom:font/icons/house.png",
-            "chars": [
-                "⑩"
-            ],
-            "height": 8,
-            "ascent": 8,
-            "type": "bitmap"
-        },
-        {
             "file": "custom:font/teams/red_rabbits.png",
             "chars": [
                 "의"
@@ -27051,6 +27042,15 @@
         },
         {
             "type": "bitmap",
+            "file": "custom:font/emojis/angry.png",
+            "ascent": 7,
+            "height": 8,
+            "chars": [
+                ""
+            ]
+        },
+		{
+            "type": "bitmap",
             "file": "custom:font/icons/steve.png",
             "ascent": 8,
             "height": 8,
@@ -27058,7 +27058,7 @@
                 "⑲"
             ]
         },
-        {
+		{
             "type": "bitmap",
             "file": "custom:font/icons/check.png",
             "ascent": 8,
@@ -27067,7 +27067,7 @@
                 "⑱"
             ]
         },
-        {
+		{
             "type": "bitmap",
             "file": "custom:font/icons/mark.png",
             "ascent": 8,
@@ -27718,7 +27718,7 @@
 		{
             "file": "custom:font/emojis/peace.png",
             "chars": [
-                "✌️"
+                ""
             ],
             "height": 8,
             "ascent": 8,
@@ -27772,7 +27772,7 @@
 		{
             "file": "custom:font/emojis/kissing.png",
             "chars": [
-                "😘"
+                "😗"
             ],
             "height": 8,
             "ascent": 8,
@@ -27875,6 +27875,33 @@
             ],
             "height": 8,
             "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/candy.png",
+            "chars": [
+                "❋"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/locked.png",
+            "chars": [
+                "✣"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/marker_candy.png",
+            "chars": [
+                "⩥"
+            ],
+            "height": 31,
+            "ascent": 30,
             "type": "bitmap"
         }
     ]
