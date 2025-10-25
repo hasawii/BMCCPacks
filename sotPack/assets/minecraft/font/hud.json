@@ -11,7 +11,7 @@
             "file": "minecraft:hud.ttf",
             "shift": [
                 0,
-                2.25
+                0
             ],
             "size": 7,
             "oversample": 4
