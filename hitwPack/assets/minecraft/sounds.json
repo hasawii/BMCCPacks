@@ -1,0 +1,18 @@
+{
+  "block.piston.extend": {
+    "replace": true,
+    "sounds": ["block/piston/extend"]
+  },
+  "block.piston.contract": {
+    "replace": true,
+    "sounds": ["block/piston/contract"]
+  },
+  "block.piston.sticky_extend": {
+    "replace": true,
+    "sounds": ["block/piston/extend"]
+  },
+  "block.piston.sticky_contract": {
+    "replace": true,
+    "sounds": ["block/piston/contract"]
+  }
+}
