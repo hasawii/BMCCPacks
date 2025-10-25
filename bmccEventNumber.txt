@@ -7,8 +7,8 @@ Packs:
     MAIN_HASH: f25265d8db7dc2499d3ebb017b1006071619e46e
 
   Sands Of Time:
-    SOT: 6
-    SOT_HASH: 15e7726babb44bab1811063ce0f6f492d880284d
+    SOT: 7
+    SOT_HASH: 4e79882d115b526fc7c9da536f0762817b7c9a33
 
   Build Mart:
     BM: 2
