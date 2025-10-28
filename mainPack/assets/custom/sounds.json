@@ -728,10 +728,5 @@
     "sounds": [
       "custom:ui.button_press"
     ]
-  },
-     "trident.ready_indicator": {
-    "sounds": [
-      "custom:trident.ready_indicator"
-    ]
   }
 }
