@@ -7,21 +7,21 @@ Packs:
     MAIN_HASH: f25265d8db7dc2499d3ebb017b1006071619e46e
 
   Sands Of Time:
-    SOT: 5
-    SOT_HASH: 0a328bcac66d11ff3415a5b1fb14a33a30dccca8
+    SOT: 7
+    SOT_HASH: 4e79882d115b526fc7c9da536f0762817b7c9a33
 
   Build Mart:
     BM: 2
     BM_HASH: 543293c2a9d02ef7d3316771841e81569e7145b2
 
   Hole In The Wall:
-    HITW: 3
-    HITW_HASH: f1620b9c603804c4400948250f1a932b24076137
+    HITW: 5
+    HITW_HASH: d95bdcc0a0a57ad6e6d693d67a4dca146f6b6edc
 
   Bingo But Fast:
     BINGO: 0
     BINGO_HASH:
 
   Main Halloween:
-    HMAIN: 14
-    HMAIN_HASH: fa045810a4560667c2e03e2dec1faa20923ace2d
+    HMAIN: 16
+    HMAIN_HASH: 30ce83000c9ad0d1df7d7a959541b9fd279a7ced
