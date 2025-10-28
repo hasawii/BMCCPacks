@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=false": {
+      "model": "minecraft:block/glazed/light_gray_glazed_1"
+    },
+    "lit=false,powered=true": {
+      "model": "minecraft:block/glazed/light_gray_glazed_2"
+    },
+    "lit=true,powered=false": {
+      "model": "minecraft:block/glazed/light_gray_glazed_3"
+    },
+    "lit=true,powered=true": {
+      "model": "minecraft:block/glazed/light_gray_glazed_4"
+    }
+  }
+}
