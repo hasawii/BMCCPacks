@@ -88,7 +88,7 @@
                 "threshold": 12,
                 "model": {
                     "type": "model",
-                    "model": "custom:bmcc_items/spark_of_strenght"
+                    "model": "custom:bmcc_items/spark_of_strength"
                 }
             },
 			{
