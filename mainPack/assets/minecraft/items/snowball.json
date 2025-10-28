@@ -195,6 +195,48 @@
                     "type": "model",
                     "model": "minecraft:item/christmas/drum"
                 }
+            },
+			{
+                "threshold": 28,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/long_timed_ball_of_darkness"
+                }
+            },
+			{
+                "threshold": 29,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/long_timed_ball_of_miningfatigue"
+                }
+            },
+			{
+                "threshold": 30,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/long_timed_ball_of_weakness"
+                }
+            },
+			{
+                "threshold": 31,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/long_timed_ball_of_wither"
+                }
+            },
+			{
+                "threshold": 32,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/ball_of_fireresistance"
+                }
+            },
+			{
+                "threshold": 33,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/ball_of_resistance"
+                }
             }
         ]
     }

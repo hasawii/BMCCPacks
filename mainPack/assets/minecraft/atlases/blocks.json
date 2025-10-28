@@ -182,6 +182,14 @@
         },
 		{
             "type": "single",
+            "resource": "custom:bmcc_items/ball_of_fireresistance"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/ball_of_resistance"
+        },
+		{
+            "type": "single",
             "resource": "custom:bmcc_items/ball_of_levitation"
         },
 		{
@@ -199,6 +207,22 @@
 		{
             "type": "single",
             "resource": "custom:bmcc_items/long_timed_ball_of_harming"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/long_timed_ball_of_darkness"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/long_timed_ball_of_weakness"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/long_timed_ball_of_wither"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/long_timed_ball_of_miningfatigue"
         },
 		{
             "type": "single",
@@ -235,6 +259,34 @@
 		{
             "type": "single",
             "resource": "custom:bmcc_items/spark_of_speed"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_shrinking"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_slowfalling"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_strength"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_dolphinsgrace"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_haste"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_leaping"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_items/spark_of_poison"
         },
 		{
             "type": "single",

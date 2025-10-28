@@ -55,6 +55,55 @@
                     "type": "model",
                     "model": "custom:bmcc_items/spark_of_speed"
                 }
+            },
+			{
+                "threshold": 8,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_slowfalling"
+                }
+            },
+			{
+                "threshold": 9,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_shrinking"
+                }
+            },
+			{
+                "threshold": 10,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_poison"
+                }
+            },
+			{
+                "threshold": 11,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_leaping"
+                }
+            },
+			{
+                "threshold": 12,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_strenght"
+                }
+            },
+			{
+                "threshold": 13,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_haste"
+                }
+            },
+			{
+                "threshold": 14,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_items/spark_of_dolphinsgrace"
+                }
             }
         ]
     }
