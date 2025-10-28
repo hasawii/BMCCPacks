@@ -1,16 +1,16 @@
 {
   "variants": {
     "lit=false,powered=false": {
-      "model": "minecraft:block/glazed/light_gray_glazed_1"
+      "model": "minecraft:block/glazed/light_gray_glazed_north"
     },
     "lit=false,powered=true": {
-      "model": "minecraft:block/glazed/light_gray_glazed_2"
+      "model": "minecraft:block/glazed/light_gray_glazed_east"
     },
     "lit=true,powered=false": {
-      "model": "minecraft:block/glazed/light_gray_glazed_3"
+      "model": "minecraft:block/glazed/light_gray_glazed_south"
     },
     "lit=true,powered=true": {
-      "model": "minecraft:block/glazed/light_gray_glazed_4"
+      "model": "minecraft:block/glazed/light_gray_glazed_west"
     }
   }
 }
