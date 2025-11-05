@@ -23,5 +23,11 @@ Packs:
     BINGO_HASH:
 
   Main Halloween:
+<<<<<<< Updated upstream
     HMAIN: 17
     HMAIN_HASH: 8597bd2d9bf415bb4ee364aa3f89426dd060bdff
+
+  Main Christmas:
+    CMAIN: 0
+    CMAIN_HASH: 
+>>>>>>> Stashed changes
