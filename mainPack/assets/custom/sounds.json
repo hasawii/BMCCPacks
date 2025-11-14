@@ -731,7 +731,7 @@
   },
      "parkourwarrior.restart": {
     "sounds": [
-      "custom:games.parkour_warrior.restart_course"
+      "custom:pkw/games.parkour_warrior.restart_course"
     ]
   },
      "countdown.go": {
