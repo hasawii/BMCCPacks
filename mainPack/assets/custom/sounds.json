@@ -728,5 +728,25 @@
     "sounds": [
       "custom:ui.button_press"
     ]
+  },
+     "parkourwarrior.restart": {
+    "sounds": [
+      "custom:games.parkour_warrior.restart_course"
+    ]
+  },
+     "countdown.go": {
+    "sounds": [
+      "custom:games.global.countdown.go"
+    ]
+  },
+     "small_objective.completed": {
+    "sounds": [
+      "custom:games.global.objective.small_objective_completed"
+    ]
+  },
+     "game.intro": {
+    "sounds": [
+      "custom:music.global.gameintro"
+    ]
   }
 }
