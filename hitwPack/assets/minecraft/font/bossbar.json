@@ -259,6 +259,13 @@
       "height": 15,
       "chars": ["\uE0A2"]
     },
+	{
+      "type": "bitmap",
+      "file": "custom:font/bossbar/parkour_warrior_bar.png",
+      "ascent": 8,
+      "height": 15,
+      "chars": ["🣒"]
+    },
   	{
       "file": "invisiblecharacters:pixel.png",
       "chars": ["Ⓨ"],
@@ -266,6 +273,7 @@
       "ascent": -2147483648,
       "type": "bitmap"
     },
+	
   	{
             "type": "space",
             "advances": {
