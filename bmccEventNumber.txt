@@ -15,8 +15,8 @@ Packs:
     BM_HASH: 543293c2a9d02ef7d3316771841e81569e7145b2
 
   Hole In The Wall:
-    HITW: 6
-    HITW_HASH: 8bf9bf5cb750c5be62a2ab5d82eb596e7249ceb3
+    HITW: 7
+    HITW_HASH: 8f485bf5e3b63f7c1f8a30e51526ef37e84dff7c
 
   Bingo But Fast:
     BINGO: 0
