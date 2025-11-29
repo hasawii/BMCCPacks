@@ -24,14 +24,14 @@
       "custom:acerace_track"
     ]
   },
-  "duelists.announce": {
-    "sounds": [
-      "custom:duelists_announce"
-    ]
-  },
   "gridrunners.track": {
     "sounds": [
       "custom:gridrunners_track"
+    ]
+  },
+  "hub.track": {
+    "sounds": [
+      "custom:music_hub"
     ]
   },
   "acerace.speed": {
@@ -44,6 +44,11 @@
       "custom:ar/acerace_jump"
     ]
   },
+  "duelists.announce": {
+    "sounds": [
+      "custom:duelists_announce"
+    ]
+  },
   "acerace.launch": {
     "sounds": [
       "custom:ar/acerace_launch"
@@ -52,6 +57,171 @@
   "acerace.aqua": {
     "sounds": [
       "custom:ar/acerace_aqua"
+    ]
+  },
+  "acerace.aqualauncher": {
+    "sounds": [
+      "custom:ar/acerace_aqualauncher"
+    ]
+  },
+  "acerace.wing": {
+    "sounds": [
+      "custom:ar/acerace_wing"
+    ]
+  },
+  "acerace.wall": {
+    "sounds": [
+      "custom:ar/acerace_wall"
+    ]
+  },
+  "witchbolt.charge1": {
+    "sounds": [
+      "custom:witchbolt/wand_charge1"
+    ]
+  },
+  "witchbolt.charge2": {
+    "sounds": [
+      "custom:witchbolt/wand_charge2"
+    ]
+  },
+  "witchbolt.charge3": {
+    "sounds": [
+      "custom:witchbolt/wand_charge3"
+    ]
+  },
+  "witchbolt.charge4": {
+    "sounds": [
+      "custom:witchbolt/wand_charge4"
+    ]
+  },
+  "witchbolt.shot1": {
+    "sounds": [
+      "custom:witchbolt/wand_shot1"
+    ]
+  },
+  "witchbolt.shot2": {
+    "sounds": [
+      "custom:witchbolt/wand_shot2"
+    ]
+  },
+  "witchbolt.shot3": {
+    "sounds": [
+      "custom:witchbolt/wand_shot3"
+    ]
+  },
+  "witchbolt.shot4": {
+    "sounds": [
+      "custom:witchbolt/wand_shot4"
+    ]
+  },
+  "witchbolt.richochet1": {
+    "sounds": [
+      "custom:witchbolt/wand_richochet1"
+    ]
+  },
+  "witchbolt.richochet2": {
+    "sounds": [
+      "custom:witchbolt/wand_richochet2"
+    ]
+  },
+  "witchbolt.richochet3": {
+    "sounds": [
+      "custom:witchbolt/wand_richochet3"
+    ]
+  },
+  "witchbolt.richochet4": {
+    "sounds": [
+      "custom:witchbolt/wand_richochet4"
+    ]
+  },
+  "main.sweetimpact1": {
+    "sounds": [
+      "custom:main/sweetimpact1"
+    ]
+  },
+  "main.pointunlock": {
+    "sounds": [
+      "custom:main/games.global.objective.point_unlock"
+    ]
+  },
+  "util.orbhit": {
+    "sounds": [
+      "custom:util/games.battle_box.ball_aoe_hit"
+    ]
+  },
+  "util.orbcountdown": {
+    "sounds": [
+      "custom:util/games.battle_box.ball_countdown"
+    ]
+  },
+  "util.orbexplode1": {
+    "sounds": [
+      "custom:util/games.battle_box.ball_explosion.1"
+    ]
+  },
+  "util.orbexplode2": {
+    "sounds": [
+      "custom:util/games.battle_box.ball_explosion.2"
+    ]
+  },
+  "util.orbexplode3": {
+    "sounds": [
+      "custom:util/games.battle_box.ball_explosion.3"
+    ]
+  },
+  "util.knockback": {
+    "sounds": [
+      "custom:util/games.battle_box.knockback_effect"
+    ]
+  },
+  "util.quickballcount": {
+    "sounds": [
+      "custom:util/games.battle_box.quick_ball_countdown"
+    ]
+  },
+  "util.spark1": {
+    "sounds": [
+      "custom:util/games.battle_box.spark_activate.1"
+    ]
+  },
+  "util.spark2": {
+    "sounds": [
+      "custom:util/games.battle_box.spark_activate.2"
+    ]
+  },
+  "util.spark3": {
+    "sounds": [
+      "custom:util/games.battle_box.spark_activate.3"
+    ]
+  },
+  "util.sparkend": {
+    "sounds": [
+      "custom:util/games.battle_box.spark_end"
+    ]
+  },
+  "railroadrush_track.track": {
+    "sounds": [
+      "custom:railroadrush_track"
+    ]
+  },
+  "main.sweetimpact2": {
+    "sounds": [
+      "custom:main/sweetimpact2"
+    ]
+  },
+  "main.sweetimpact3": {
+    "sounds": [
+      "custom:main/sweetimpact3"
+    ]
+  },
+  "main.sweetpickup": {
+    "sounds": [
+      "custom:main/sweetpickup"
+    ]
+  },
+    "main.tridentready": {
+    "sounds": [
+      "custom:main/trident_ready"
     ]
   },
   "acerace.lap": {
@@ -67,6 +237,11 @@
   "tsf.gliding": {
     "sounds": [
       "custom:tgttos/tsf_gliding"
+    ]
+  },
+  "pumpkinkingswitch": {
+    "sounds": [
+      "custom:main/pumpkinkingswitch"
     ]
   },
   "tsf.start": {
@@ -142,6 +317,11 @@
   "dodgebolt.track": {
     "sounds": [
       "custom:dodgebolt_track"
+    ]
+  },
+  "dodgebolt.track.fast": {
+    "sounds": [
+      "custom:dodgebolt_track_fast"
     ]
   },
   "rocketspleefrush.updraft": {
@@ -294,11 +474,6 @@
       "custom:md/rickochet1"
     ]
   },
-   "acerace.wall": {
-    "sounds": [
-      "custom:ar/acerace_wall"
-    ]
-  },
    "acerace.slowlap": {
     "sounds": [
       "custom:ar/acerace_slowlap"
@@ -392,6 +567,11 @@
        "game.reveal": {
     "sounds": [
       "custom:main/gamereveal"
+    ]
+  },
+       "enemy.complete": {
+    "sounds": [
+      "custom:main/enemy_complete"
     ]
   },
        "game.selected": {
@@ -514,9 +694,59 @@
       "custom:dd/click6"
     ]
   },
-     "dodgebolt.death": {
+  "dodgebolt.death": {
+ "sounds": [
+   "custom:main/death"
+    ]
+  },
+     "eventbegin": {
     "sounds": [
-      "custom:main/death"
+      "custom:main/eventbegin"
+    ]
+  },
+     "crowns_announce": {
+    "sounds": [
+      "custom:crowns_announce"
+    ]
+  },
+     "awards.track": {
+    "sounds": [
+      "custom:awards_track"
+    ]
+  },
+     "ui_click_normal": {
+    "sounds": [
+      "custom:ui.click_normal"
+    ]
+  },
+     "ui_click_dead": {
+    "sounds": [
+      "custom:ui.click_dead"
+    ]
+  },
+     "ui_button_press": {
+    "sounds": [
+      "custom:ui.button_press"
+    ]
+  },
+     "parkourwarrior.restart": {
+    "sounds": [
+      "custom:pkw/games.parkour_warrior.restart_course"
+    ]
+  },
+     "countdown.go": {
+    "sounds": [
+      "custom:games.global.countdown.go"
+    ]
+  },
+     "small_objective.completed": {
+    "sounds": [
+      "custom:games.global.objective.small_objective_completed"
+    ]
+  },
+     "game.intro": {
+    "sounds": [
+      "custom:music.global.gameintro"
     ]
   }
 }
