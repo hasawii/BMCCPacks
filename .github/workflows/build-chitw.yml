@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: chitw-pack
+  group: hitwChristmas-pack
   cancel-in-progress: true
 
 jobs:
@@ -30,37 +30,37 @@ jobs:
 
       - name: Generate README.txt
         run: |
-          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > chitwPack/README.txt
-          echo "" >> chitwPack/README.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> chitwPack/README.txt
-          echo "" >> chitwPack/README.txt
-          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Christmasified Hole In The Wall Pack" >> chitwPack/README.txt
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > hitwChristmasPack/README.txt
+          echo "" >> hitwChristmasPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> hitwChristmasPack/README.txt
+          echo "" >> hitwChristmasPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Christmasified Hole In The Wall Pack" >> hitwChristmasPack/README.txt
 
       - name: Create CHITW ZIP
         run: |
-          rm -f BMCC-chitw.zip
-          cd chitwPack
-          zip -r ../BMCC-chitw.zip . -x ".git/*" ".github/*"
+          rm -f BMCC-hitwChristmas.zip
+          cd hitwChristmasPack
+          zip -r ../BMCC-hitwChristmas.zip . -x ".git/*" ".github/*"
           cd ..
 
       - name: Compute SHA-1 hash and save as artifact
         run: |
-          SHA1=$(sha1sum BMCC-chitw.zip | awk '{ print $1 }')
-          echo "$SHA1" > bmcc-chitw.hash
+          SHA1=$(sha1sum BMCC-hitwChristmas.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-hitwChristmas.hash
 
       - name: Upload CHITW ZIP to release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: chitwLatest
-          files: BMCC-chitw.zip
+          tag_name: hitwChristmasLatest
+          files: BMCC-hitwChristmas.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload hash artifact
         uses: actions/upload-artifact@v4
         with:
-          name: chitw-hash
-          path: bmcc-chitw.hash
+          name: hitwChristmas-hash
+          path: bmcc-hitwChristmas.hash
 
   update-version-and-hash:
     name: Update CHITW Version and Hash
@@ -74,13 +74,13 @@ jobs:
       - name: Download hash artifact
         uses: actions/download-artifact@v4
         with:
-          name: chitw-hash
+          name: hitwChristmas-hash
           path: .
 
       - name: Update CHITW version and hash in root file
         run: |
           git pull origin main
-          SHA1=$(cat bmcc-chitw.hash)
+          SHA1=$(cat bmcc-hitwChristmas.hash)
           NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
           EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
           sed -i "s/^[[:space:]]*CHITW:.*/    CHITW: $NEXT_VERSION/" bmccEventNumber.txt
