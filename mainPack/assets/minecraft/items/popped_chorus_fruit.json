@@ -937,6 +937,97 @@
                     "type": "model",
                     "model": "custom:bmcc_interface/10000"
                 }
+            },
+			{
+                "threshold": 69,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/mode_swap_challenge"
+                }
+            },
+			{
+                "threshold": 70,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/mode_swap_practice"
+                }
+            },
+			{
+                "threshold": 71,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/next"
+                }
+            },
+			{
+                "threshold": 72,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/next_small"
+                }
+            },
+			{
+                "threshold": 73,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/previous"
+                }
+            },
+			{
+                "threshold": 74,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/previous_small"
+                }
+            },
+			{
+                "threshold": 75,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/repeater_course"
+                }
+            },
+			{
+                "threshold": 76,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/repeater_off"
+                }
+            },
+			{
+                "threshold": 77,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/repeater_section"
+                }
+            },
+			{
+                "threshold": 78,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/restart_course"
+                }
+            },
+			{
+                "threshold": 79,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/timer_paused"
+                }
+            },
+			{
+                "threshold": 80,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/timer_started"
+                }
+            },
+			{
+                "threshold": 81,
+                "model": {
+                    "type": "model",
+                    "model": "custom:bmcc_interface/practice/timer_stopped"
+                }
             }
         ]
     },

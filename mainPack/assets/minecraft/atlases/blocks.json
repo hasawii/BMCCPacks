@@ -1623,6 +1623,58 @@
         },
 		{
             "type": "single",
+            "resource": "custom:bmcc_interface/practice/mode_swap_challenge"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/mode_swap_practice"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/next"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/next_small"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/previous"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/previous_small"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/repeater_course"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/repeater_off"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/repeater_section"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/restart_course"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/timer_paused"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/timer_started"
+        },
+		{
+            "type": "single",
+            "resource": "custom:bmcc_interface/practice/timer_stopped"
+        },
+		{
+            "type": "single",
             "resource": "custom:bmcc_interface/accept"
         },		
         {
