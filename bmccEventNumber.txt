@@ -31,5 +31,5 @@ Packs:
     CMAIN_HASH: b5eeea1efa25f151c00b9c2c0c6e2a489278c044
 
   Hole In The Wall Christmas:
-    CHITW: 0
-    CHITW_HASH: 
+    CHITW: 1
+    CHITW_HASH: 3984d269e176f12f0a77c124df4b6c5533dcf095
