@@ -27,5 +27,5 @@ Packs:
     HMAIN_HASH: 9041da925680d8e0c3dbbce928aac8746a0939dd
 
   Main Christmas:
-    CMAIN: 0
-    CMAIN_HASH: 
+    CMAIN: 1
+    CMAIN_HASH: 2db7d2c422b1dad939d489c1b4172ab269636fb1
