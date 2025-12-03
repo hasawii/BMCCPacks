@@ -1,4 +1,4 @@
-name: HITW Pack (DONT USE)
+name: HITW Pack
 
 on:
   workflow_dispatch:

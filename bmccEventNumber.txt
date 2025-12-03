@@ -1,27 +1,31 @@
-eventNumber: 25
+eventNumber: 26
 
 Packs:
 
   Main:
     MAIN: 
-    MAIN_HASH: 2f73f9c08f6128c0fc033f6cd44cfa51853a055d
+    MAIN_HASH: 72c2df99d3ea5b98ab7fe24724cda09070236b28
 
   Sands Of Time:
-    SOT: 7
-    SOT_HASH: 4e79882d115b526fc7c9da536f0762817b7c9a33
+    SOT: 9
+    SOT_HASH: fc847db6470b8ea86cf0962b86e9ff34de801e41
 
   Build Mart:
-    BM: 2
-    BM_HASH: 543293c2a9d02ef7d3316771841e81569e7145b2
+    BM: 3
+    BM_HASH: 2cc0f79b0e1dcc1a71e297ffc7cefb486181a03b
 
   Hole In The Wall:
-    HITW: 6
-    HITW_HASH: 8bf9bf5cb750c5be62a2ab5d82eb596e7249ceb3
+    HITW: 7
+    HITW_HASH: 8f485bf5e3b63f7c1f8a30e51526ef37e84dff7c
 
   Bingo But Fast:
     BINGO: 0
     BINGO_HASH:
 
   Main Halloween:
-    HMAIN: 16
-    HMAIN_HASH: 30ce83000c9ad0d1df7d7a959541b9fd279a7ced
+    HMAIN: 18
+    HMAIN_HASH: 9041da925680d8e0c3dbbce928aac8746a0939dd
+
+  Main Christmas:
+    CMAIN: 0
+    CMAIN_HASH: 

@@ -97,6 +97,13 @@
 		 "height": 49,
 		 "ascent": 24,
 		 "chars": ["\uE015"]
+		},
+                {
+	     "type": "bitmap",
+	     "file": "custom:font/railroadrush.png",
+		 "height": 49,
+		 "ascent": 24,
+		 "chars": ["\uE016"]
 		}
     ]
 }

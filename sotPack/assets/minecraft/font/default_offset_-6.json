@@ -26329,6 +26329,15 @@
             "ascent": -2147483648,
             "type": "bitmap"
         },
+	{
+            "file": "custom:font/bossbar/tick_small.png",
+            "chars": [
+              "\uE024"
+            ],
+            "height": 8,
+            "ascent": 4,
+            "type": "bitmap"
+        },
         {
             "file": "custom:font/icons/medal.png",
             "chars": [
@@ -26488,7 +26497,106 @@
                 "⓴"
             ],
             "height": 8,
-            "ascent": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/progress_counter/red/full.png",
+            "chars": [
+                "Ⅰ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/progress_counter/orange/full.png",
+            "chars": [
+                "Ⅱ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/progress_counter/full.png",
+            "chars": [
+                "Ⅲ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/progress_counter/empty.png",
+            "chars": [
+                "Ⅳ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/glow.png",
+            "chars": [
+                "Ⅹ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/progress_counter/orange_square/full.png",
+            "chars": [
+                "Ⅴ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/rocketspleefrush.png",
+            "chars": [
+                "Ⅵ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/ender_pearl.png",
+            "chars": [
+                "Ⅶ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/no.png",
+            "chars": [
+                "Ⅺ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/player.png",
+            "chars": [
+                "Ⅸ"
+            ],
+            "height": 8,
+            "ascent": -11,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/bossbar/tick_small.png",
+            "chars": [
+              "Ⅷ"
+            ],
+            "height": 8,
+            "ascent": -11,
             "type": "bitmap"
         },
         {
@@ -26572,10 +26680,109 @@
             "ascent": 4,
             "type": "bitmap"
         },
+		{
+            "file": "custom:font/icons/frog_empty.png",
+            "chars": [
+                "🣓"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/frog_bronze.png",
+            "chars": [
+                "🣔"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/frog_silver.png",
+            "chars": [
+                "🣕"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/frog_gold.png",
+            "chars": [
+                "🣖"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/point_empty_bonus.png",
+            "chars": [
+                "🣗"
+            ],
+            "height": 14,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/point_bonus_1.png",
+            "chars": [
+                "🣘"
+            ],
+            "height": 14,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/point_bonus_2.png",
+            "chars": [
+                "🣙"
+            ],
+            "height": 14,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/point_bonus_3.png",
+            "chars": [
+                "🣚"
+            ],
+            "height": 14,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/empty_box.png",
+            "chars": [
+                "🣛"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
+        {
+            "file": "custom:font/icons/point_full.png",
+            "chars": [
+                "🣝"
+            ],
+            "height": 8,
+            "ascent": 5,
+            "type": "bitmap"
+        },
         {
             "file": "custom:font/icons/parkourwarrior.png",
             "chars": [
                 "❹"
+            ],
+            "height": 8,
+            "ascent": 4,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/icons/mark.png",
+            "chars": [
+                "⑰"
             ],
             "height": 8,
             "ascent": 4,
@@ -26985,330 +27192,6 @@
             "height": 1200,
             "ascent": 250,
             "type": "bitmap"
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/angry.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-		{
-            "type": "bitmap",
-            "file": "custom:font/icons/steve.png",
-            "ascent": 4,
-            "height": 8,
-            "chars": [
-                "⑲"
-            ]
-        },
-		{
-            "type": "bitmap",
-            "file": "custom:font/icons/check.png",
-            "ascent": 8,
-            "height": 8,
-            "chars": [
-                "⑱"
-            ]
-        },
-		{
-            "type": "bitmap",
-            "file": "custom:font/icons/mark.png",
-            "ascent": 4,
-            "height": 8,
-            "chars": [
-                "⑰"
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/chicken.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/clown.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/eyes.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/fearful.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/flushed.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/grimacing.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/grin.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/heart_eyes.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/joy.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/kekw.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/laughing.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/nerd.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/neutral.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/pensive.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/point_left.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/point_right.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/scream.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/skull.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/smile.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/sob.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/sunglasses.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/surprised.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/sus.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/sweat_smile.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/thinking.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/thumbs_down.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/thumbs_up.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/tongue_out.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/weary.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "custom:font/emojis/winking_tongue.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                ""
-            ]
-        },
-		{
-            "type": "bitmap",
-            "file": "custom:font/emojis/cold.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                "🃺"
-            ]
-        },
-		{
-            "type": "bitmap",
-            "file": "custom:font/emojis/fire.png",
-            "ascent": 7,
-            "height": 8,
-            "chars": [
-                "🃹"
-            ]
         }
     ]
 }

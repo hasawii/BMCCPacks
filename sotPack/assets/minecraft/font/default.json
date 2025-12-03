@@ -26780,15 +26780,6 @@
             "type": "bitmap"
         },
         {
-            "file": "custom:font/icons/house.png",
-            "chars": [
-                "⑩"
-            ],
-            "height": 8,
-            "ascent": 8,
-            "type": "bitmap"
-        },
-        {
             "file": "custom:font/teams/red_rabbits.png",
             "chars": [
                 "의"
@@ -27051,6 +27042,15 @@
         },
         {
             "type": "bitmap",
+            "file": "custom:font/emojis/angry.png",
+            "ascent": 7,
+            "height": 8,
+            "chars": [
+                ""
+            ]
+        },
+		{
+            "type": "bitmap",
             "file": "custom:font/icons/steve.png",
             "ascent": 8,
             "height": 8,
@@ -27058,7 +27058,7 @@
                 "⑲"
             ]
         },
-        {
+		{
             "type": "bitmap",
             "file": "custom:font/icons/check.png",
             "ascent": 8,
@@ -27067,7 +27067,7 @@
                 "⑱"
             ]
         },
-        {
+		{
             "type": "bitmap",
             "file": "custom:font/icons/mark.png",
             "ascent": 8,
@@ -27686,6 +27686,222 @@
             ],
             "height": 8,
             "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/moneymouth.png",
+            "chars": [
+                "🤑"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/ninja.png",
+            "chars": [
+                "🥷"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/sleeping.png",
+            "chars": [
+                "😴"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/peace.png",
+            "chars": [
+                ""
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/dizzy_face.png",
+            "chars": [
+                "😵"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/stuck_out_tongue_closed_eyes.png",
+            "chars": [
+                "😝"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/face_vomiting.png",
+            "chars": [
+                "🤮"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/nausiated_face.png",
+            "chars": [
+                "🤢"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/face_with_monocle.png",
+            "chars": [
+                "🧐"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/kissing.png",
+            "chars": [
+                "😗"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/kissing_heart.png",
+            "chars": [
+                "😘"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/wink.png",
+            "chars": [
+                "😉"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/yawning_face.png",
+            "chars": [
+                "🥱"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/zany_face.png",
+            "chars": [
+                "🤪"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/exploding_head.png",
+            "chars": [
+                "🤯"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/face_holding_back_tears.png",
+            "chars": [
+                "🥹"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/dissapointed.png",
+            "chars": [
+                "😞"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/rolling_eyes.png",
+            "chars": [
+                "🙄"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/hot_face.png",
+            "chars": [
+                "🥵"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/face_with_symbols_over_mouth.png",
+            "chars": [
+                "🤬"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/emojis/face_with_3_hearts.png",
+            "chars": [
+                "🥰"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/candy.png",
+            "chars": [
+                "❋"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/locked.png",
+            "chars": [
+                "✣"
+            ],
+            "height": 8,
+            "ascent": 8,
+            "type": "bitmap"
+        },
+		{
+            "file": "custom:font/marker_candy.png",
+            "chars": [
+                "⩥"
+            ],
+            "height": 31,
+            "ascent": 30,
             "type": "bitmap"
         }
     ]

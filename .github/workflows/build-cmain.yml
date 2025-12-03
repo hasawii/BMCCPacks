@@ -1,0 +1,92 @@
+name: Christmasified Main Pack
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: cmain-pack
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build MAIN CHRISTMAS Pack
+    runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.next_version }}
+      EVENT_NUM: ${{ steps.get_version.outputs.event_num }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Precompute event number and next CMAIN version
+        id: get_version
+        run: |
+          EVENT_NUM=$(grep 'eventNumber:' bmccEventNumber.txt | cut -d':' -f2 | tr -d ' ')
+          CMAIN_VERSION=$(grep 'CMAIN:' bmccEventNumber.txt | awk '{print $2}')
+          NEXT_VERSION=$((CMAIN_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
+
+      - name: Create README.txt placeholder
+        run: |
+          echo "Hi, this pack uses FAN-MADE assets and stolen ones from MCCI and MCC." > mainChristmasPack/README.txt
+          echo "" >> mainChristmasPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> mainChristmasPack/README.txt
+          echo "" >> mainChristmasPack/README.txt
+          echo "This pack is for BMCC ${{ steps.get_version.outputs.event_num }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the Christmasified Main Pack" >> mainChristmasPack/README.txt
+
+      - name: Create CHRISTMAS MAIN ZIP
+        run: |
+          rm -f BMCC-cMain.zip
+          cd mainChristmasPack
+          zip -r ../BMCC-cMain.zip . -x ".git/*" ".github/*"
+          cd ..
+
+      - name: Compute SHA-1 hash and save as artifact
+        run: |
+          SHA1=$(sha1sum BMCC-cMain.zip | awk '{ print $1 }')
+          echo "$SHA1" > bmcc-cmain.hash
+
+      - name: Upload CHRISTMAS MAIN ZIP to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: cMainLatest
+          files: BMCC-cMain.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload hash artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmain-hash
+          path: bmcc-cmain.hash
+
+  update-version-and-hash:
+    name: Update CMAIN Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download hash artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cmain-hash
+          path: .
+
+      - name: Update CMAIN version and hash in root file
+        run: |
+          git pull origin main
+          SHA1=$(cat bmcc-cmain.hash)
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+          EVENT_NUM=${{ needs.build.outputs.EVENT_NUM }}
+          sed -i "s/^[[:space:]]*CMAIN:.*/    CMAIN: $NEXT_VERSION/" bmccEventNumber.txt
+          sed -i "s/^[[:space:]]*CMAIN_HASH:.*/    CMAIN_HASH: $SHA1/" bmccEventNumber.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bmccEventNumber.txt
+          git commit -m "Increment CMAIN version to $NEXT_VERSION and update hash"
+          git push origin main
