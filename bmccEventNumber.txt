@@ -29,3 +29,7 @@ Packs:
   Main Christmas:
     CMAIN: 0
     CMAIN_HASH: 
+
+  Hole In The Wall Christmas:
+    CHITW: 0
+    CHITW_HASH: 
