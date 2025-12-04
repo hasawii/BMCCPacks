@@ -1,0 +1,6 @@
+{
+    "parent": "block/block",
+    "textures": {
+		"texture": "block/slime_block"
+    }
+}
