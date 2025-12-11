@@ -1,0 +1,13 @@
+{
+  "decisiondome.track": {
+    "sounds": [
+      "custom:decisiondome_track"
+	]
+  },
+  "oneminutetomcc.track": {
+    "sounds": [
+      "custom:oneminutetomcc_track"
+    ]
+  }
+}
+
