@@ -71,6 +71,7 @@
 		"firstperson_righthand": {
 			"rotation": [100, 17, -30],
 			"translation": [6, 3, 0.33]
+		},
 		"gui": {
 			"rotation": [107.33, 14.8, -41.38],
 			"translation": [4.25, 0, 0]
