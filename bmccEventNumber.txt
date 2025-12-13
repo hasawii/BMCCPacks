@@ -27,8 +27,8 @@ Packs:
     HMAIN_HASH: 9041da925680d8e0c3dbbce928aac8746a0939dd
 
   Main Christmas:
-    CMAIN: 2
-    CMAIN_HASH: 6a3b0b56418e5059bf7ede2d9fd9f91a066b4e55
+    CMAIN: 3
+    CMAIN_HASH: 1fb9d0095916fdfabeec93fd9217d3b6064e052a
 
   Hole In The Wall Christmas:
     CHITW: 2
