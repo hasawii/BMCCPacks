@@ -4,7 +4,7 @@ Packs:
 
   Main:
     MAIN: 
-    MAIN_HASH: 9150e9797bcb7af22b389dff06babdce11a33743
+    MAIN_HASH: 3e4b2933817e9d0278f9aea1fa7484e7fa4f794b
 
   Sands Of Time:
     SOT: 10
