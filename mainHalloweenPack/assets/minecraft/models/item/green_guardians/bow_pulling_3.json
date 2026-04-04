@@ -1,6 +1,0 @@
-{
-    "parent": "item/custom/bow",
-    "textures": {
-        "layer0": "item/green_guardians/bow_pulling_3"
-    }
-}

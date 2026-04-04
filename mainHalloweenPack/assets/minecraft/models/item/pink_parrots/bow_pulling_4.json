@@ -1,6 +1,0 @@
-{
-    "parent": "item/custom/bow",
-    "textures": {
-        "layer0": "item/pink_parrots/bow_pulling_4"
-    }
-}
